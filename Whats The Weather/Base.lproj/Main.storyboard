@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marc-wieland-113759.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-t8-S0N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8h-d0-xaN">
+                                <rect key="frame" x="68" y="54" width="184.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wj-je-SLG">
+                                <rect key="frame" x="104.5" y="95" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PND-fr-zSW">
+                                <rect key="frame" x="41" y="136" width="238" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbD-Sj-rGZ">
+                                <rect key="frame" x="125" y="174" width="70" height="30"/>
+                                <state key="normal" title="Check out">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBD-0K-JFq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-IU-TRI">
+                                <rect key="frame" x="16" y="222" width="288" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="lNa-7z-Uec"/>
+                                    <constraint firstAttribute="width" constant="288" id="nY1-ag-vIb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vo9-t8-S0N" secondAttribute="bottom" id="1Iz-dj-gSv"/>
+                            <constraint firstItem="PND-fr-zSW" firstAttribute="top" secondItem="4wj-je-SLG" secondAttribute="bottom" constant="20" id="3BP-u3-hNH"/>
+                            <constraint firstItem="nbD-Sj-rGZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CTi-bn-Ag3"/>
+                            <constraint firstItem="hqA-IU-TRI" firstAttribute="top" secondItem="nbD-Sj-rGZ" secondAttribute="bottom" constant="18" id="DE3-YC-9SZ"/>
+                            <constraint firstAttribute="trailing" secondItem="vo9-t8-S0N" secondAttribute="trailing" id="IWe-8f-3dT"/>
+                            <constraint firstItem="4wj-je-SLG" firstAttribute="top" secondItem="A8h-d0-xaN" secondAttribute="bottom" constant="17" id="IzG-J9-8GI"/>
+                            <constraint firstItem="A8h-d0-xaN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="Jch-5L-btb"/>
+                            <constraint firstItem="nbD-Sj-rGZ" firstAttribute="top" secondItem="PND-fr-zSW" secondAttribute="bottom" constant="8" id="Jhq-g6-0iH"/>
+                            <constraint firstItem="hqA-IU-TRI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NY7-O0-Px5"/>
+                            <constraint firstItem="A8h-d0-xaN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vd7-af-vrG"/>
+                            <constraint firstItem="vo9-t8-S0N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wzm-HG-War"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PND-fr-zSW" secondAttribute="trailing" constant="25" id="cU6-na-Apl"/>
+                            <constraint firstItem="4wj-je-SLG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eRG-qC-RXf"/>
+                            <constraint firstItem="vo9-t8-S0N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wes-SR-9bJ"/>
+                            <constraint firstItem="PND-fr-zSW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="x0Y-Qv-Fe2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="PND-fr-zSW" id="zfc-D2-K5H"/>
+                        <outlet property="resultLabel" destination="hqA-IU-TRI" id="pJn-Gu-jCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="132.04225352112675"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="marc-wieland-113759.jpg" width="1000" height="667"/>
+    </resources>
+</document>
